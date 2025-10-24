@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCM360° — Chethan Chirag M</title>
+  <meta name="description" content="Professional portfolio of Chethan Chirag M — B.C.A student at MIT First Grade College, University of Mysore. AI & Web enthusiast showcasing certifications, projects, and skills.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <style>
+    section h2::before, section h2::after, h2::before, h2::after, .section-title::before, .section-title::after, hr { display: none !important; content: none !important; }
+
+    section h2 { background: transparent !important; border: none !important; box-shadow: none !important; }
+
+    :root {
+      --accent: #00c6ff;
+      --bg: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      --glass: rgba(255,255,255,0.06);
+      --glass-strong: rgba(255,255,255,0.12);
+      --max-width: 1100px;
+      --muted: rgba(255,255,255,0.85);
+    }
+
+    * {box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
+    html,body{height:100%}
+    body {
+      background: var(--bg);
+      background-attachment: fixed; 
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    .container{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+
+    
+    header{position:fixed;top:0;left:0;width:100%;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:rgba(0,0,0,0.45);backdrop-filter:blur(6px);z-index:999;}
+    header .brand{font-weight:700;color:var(--accent);letter-spacing:0.3px}
+    nav ul{display:flex;gap:18px;align-items:center;list-style:none}
+    nav a{color:#fff;text-decoration:none;font-weight:600;padding:8px 6px;border-radius:6px}
+    nav a:hover{color:#000;background:var(--accent)}
+
+    
+    .hamburger{display:none;background:transparent;border:0;color:#fff;font-size:22px;cursor:pointer}
+    @media(max-width:820px){nav ul{display:none;}
+      .hamburger{display:block}}
+
+    
+    #home{min-height:100vh;display:flex;align-items:center;padding-top:90px}
+    .home-grid{display:grid;grid-template-columns:1fr 260px;gap:36px;align-items:center}
+
+    .intro h1{font-size:34px;margin-bottom:8px}
+    .roles{color:var(--accent);font-weight:600;margin-bottom:12px}
+    .intro p{color:var(--muted)}
+
+    .actions{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:#001219;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700;transition:transform .18s ease,box-shadow .18s ease}
+    .btn:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,198,255,0.12)}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.09);color:#fff}
+
+    
+    .profile-card{background:var(--glass-strong);padding:18px;border-radius:12px;text-align:center}
+    .profile-frame{width:220px;aspect-ratio:1/1;margin:0 auto;border-radius:12px;overflow:hidden;border:3px solid var(--accent);display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
+    .profile-frame img{width:100%;height:100%;object-fit:cover;display:block}
+    .profile-name{margin-top:12px;font-weight:700}
+    .profile-sub{font-size:13px;color:var(--muted)}
+
+    section{padding:80px 0}
+    section h2{font-size:22px;margin-bottom:18px;color:var(--accent);text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:12px;justify-content:center}
+    
+
+    
+    .about-text{max-width:880px;margin:0 auto;background:var(--glass);padding:22px;border-radius:12px}
+    .quick-facts{margin-top:12px;background:rgba(255,255,255,0.03);padding:12px;border-radius:8px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+
+    
+    .cert-list{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+    .cert-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px;border-radius:10px}
+    .cert-left{max-width:76%}
+    .cert-left strong{display:block}
+    .verify-btn{background:transparent;border:1px solid rgba(255,255,255,0.12);padding:8px 12px;border-radius:8px;color:#fff;text-decoration:none;font-weight:700;transition:all .18s ease}
+    .verify-btn:hover{background:var(--accent);color:#000}
+
+    
+    .skills-list{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+    .skill-tag{padding:8px 14px;border-radius:999px;font-weight:700;background:rgba(255,255,255,0.04);transition:all .18s}
+    .skill-tag:hover{background:var(--accent);color:#000}
+
+    
+    .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+    .project{padding:14px;border-radius:10px}
+
+    
+    .languages-grid{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+    .lang-card{background:rgba(255,255,255,0.03);padding:12px 16px;border-radius:8px;min-width:160px;text-align:left}
+    .lang-title{font-weight:700;color:var(--accent);margin-bottom:6px}
+    .lang-bar{height:8px;background:rgba(255,255,255,0.06);border-radius:6px;overflow:hidden}
+    .lang-fill{height:100%;background:linear-gradient(90deg,var(--accent),#87e6ff);}
+
+    
+    .contact-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .social-btn{padding:10px 14px;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);text-decoration:none;color:#fff;font-weight:700;transition:all .18s}
+    .social-btn:hover{background:var(--accent);color:#001219}
+
+    footer{padding:22px 0;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+
+    @media(max-width:900px){.home-grid{grid-template-columns:1fr;gap:20px}.profile-frame{width:200px}.actions{justify-content:center}}
+    @media(max-width:480px){.profile-frame{width:160px}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+    <div class="brand">CCM360° — Chethan Chirag M</div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  
+  <section id="home">
+    <div class="home-grid animate__animated animate__fadeInUp">
+      <div class="intro">
+        <h1>Hi, I'm Chethan Chirag M</h1>
+        <div class="roles">AI Enthusiast • Web Developer • Programmer</div>
+        <p>I’m a B.C.A. student from Mysuru, fascinated by AI and web/software development. I enjoy turning ideas into useful, human-centered projects that make life easier. When not coding, I’m usually writing, learning, or playing badminton to stay inspired.</p>
+
+        <div class="actions">
+          <a href="#about" class="btn">Learn More</a>
+          
+          <a href="resume.pdf" class="btn ghost" download>Download Resume</a>
+          
+        
+        </div>
+      </div>
+
+      
+      <aside class="profile-card">
+        <div class="profile-frame">
+          
+          <img src="profile.png" alt="Chethan Chirag"> 
+        </div>
+        <div class="profile-name">Chethan Chirag M</div>
+        <div class="profile-sub">B.C.A • AI & Web Enthusiast</div>
+      </aside>
+    </div>
+  </section>
+
+  
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-text animate__animated animate__fadeInUp">
+      <p>Hi, I'm Chethan Chirag M, a passionate and curious B.C.A. student at MIT FGC College, Mysuru, aspiring to become a skilled AI-driven software developer. With a strong interest in artificial intelligence, data analytics, and user-centered design, I aim to build technology that solves real-world problems efficiently and intelligently.</p>
+      <p>I’m a lifelong learner who believes in staying ahead in the ever-evolving tech world by constantly exploring new tools, ideas, and innovations. Creativity drives my approach — whether I’m developing projects, writing to express ideas, or playing badminton to stay focused and disciplined.</p>
+      <p>I strive to blend logic with imagination to create impactful, human-centered solutions that make a meaningful difference.</p>
+
+      <div class="quick-facts" aria-hidden="false">
+        
+        <div>Expected graduation — <strong>2026</strong></div>
+        <div>Current CGPA — <strong>8.2</strong></div>
+        <div>Chair (Communication) — <strong>College English Literary Club</strong></div>
+        <div>Club Editor — <strong>Rotract Club, MIT FGC</strong></div>
+        <div>Co-author — <strong>"Words of Winged Minds"</strong></div>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="cert-list">
+      <div class="cert-item">
+        <div class="cert-left">
+          <strong>Coursera — Google IT Support Professional Certificate</strong>
+          <div class="muted">User-centered design, prototyping & wireframing.</div>
+        </div>
+        
+        <a class="verify-btn" href="https://coursera.org/verify/professional-cert/1HD8RCH8G5NB" target="_blank" rel="noopener">View</a>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-left">
+          <strong>Coursera — Google Data Analytics Professional Certificate</strong>
+          <div class="muted">Data analysis with SQL, R, and visualization.</div>
+        </div>
+        
+        <a class="verify-btn" href="https://coursera.org/verify/professional-cert/ME1ABH9F6JYR" target="_blank" rel="noopener">View</a>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-left">
+          <strong>Coursera — Google UX Design Professional Certificate</strong>
+          <div class="muted">IT fundamentals, troubleshooting, networking.</div>
+        </div>
+        
+        <a class="verify-btn" href="https://coursera.org/verify/professional-cert/WSHWF6DZHF4E" target="_blank" rel="noopener">View</a>
+      </div>
+
+      <div class="cert-item">
+        <div class="cert-left">
+          <strong>Infosys Springboard — Applied Generative AI</strong>
+          <div class="muted">Hands-on generative AI, foundational models, and prompt engineering.</div>
+        </div>
+        
+        <a class="verify-btn" href="https://verify.onwingspan.com/" target="_blank" rel="noopener">Verify</a>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section id="skills">
+    <h2>Skills & Tools</h2>
+    <div class="skills-list">
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">C</span>
+      <span class="skill-tag">HTML / CSS / JavaScript</span>
+      <span class="skill-tag">R</span>
+      <span class="skill-tag">AI</span>
+      <span class="skill-tag">Machine Learning</span>
+      <span class="skill-tag">VS Code</span>
+      <span class="skill-tag">Anaconda</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">NumPy / Pandas</span>
+      <span class="skill-tag">Adaptability</span>
+      <span class="skill-tag">Problem Solving</span>
+    </div>
+  </section>
+
+  
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>ShelfLife — Grocery Expiry Predictor (Ongoing)</h3>
+        <p>Flask backend + Streamlit frontend. Auto-calculates expiry dates for known refrigerated items; accepts manual inputs for unknown items.</p>
+      </div>
+
+      <div class="project">
+        <h3>SplitTicket — Smart Train Seat Optimization (Concept)</h3>
+        <p>Research & prototype concept to suggest split-ticket booking routes to improve seat utilization on Indian Railways.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="languages">
+    <h2>Languages</h2>
+    <div class="languages-grid">
+      <div class="lang-card">
+        <div class="lang-title">Kannada</div>
+        <div class="muted">Native • Full Professional Proficiency</div>
+        <div class="lang-bar" aria-hidden="true" style="margin-top:8px"><div class="lang-fill" style="width:96%"></div></div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-title">English</div>
+        <div class="muted">Fluent • Academic & Professional Communication</div>
+        <div class="lang-bar" aria-hidden="true" style="margin-top:8px"><div class="lang-fill" style="width:90%"></div></div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-title">Hindi</div>
+        <div class="muted">Conversational • Working Proficiency</div>
+        <div class="lang-bar" aria-hidden="true" style="margin-top:8px"><div class="lang-fill" style="width:68%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-row">
+      
+      <a class="social-btn" href="https://www.linkedin.com/in/chethan-chirag-m-320772284" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="social-btn" href="https://github.com/Chethan7505" target="_blank" rel="noopener">GitHub</a>
+      <a class="social-btn" href="https://www.instagram.com/chethan_chirag.m" target="_blank" rel="noopener">Instagram</a>
+    </div>
+
+    <div style="text-align:center;margin-top:12px;color:var(--muted)">
+      <p><strong>Email:</strong> <a href="mailto:chethan7505@gmail.com" style="color:inherit;text-decoration:underline">chethan7505@gmail.com</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Chethan Chirag M • CCM360°. All rights reserved.</p>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('primary-nav');
+  hamburger && hamburger.addEventListener('click', ()=>{
+    if(nav.style.display === 'block') nav.style.display = '';
+    else nav.style.display = 'block';
+  });
+
+  // Header background on scroll
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', ()=>{ window.scrollY > 50 ? header.classList.add('scrolled') : header.classList.remove('scrolled'); });
+
+  // Accessibility: close mobile menu on link click
+  document.querySelectorAll('#primary-nav a').forEach(a=>a.addEventListener('click', ()=>{ if(window.innerWidth <= 820) nav.style.display = ''; }));
+</script>
+
+</body>
+</html>
